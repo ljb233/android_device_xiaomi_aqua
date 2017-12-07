@@ -15,10 +15,14 @@
 #
 
 DEVICE_PATH := device/xiaomi/libra
+COMMON_PATH := device/xiaomi/msm8992-common
 
-# A new experiment..
-include $(DEVICE_PATH)/PlatformConfig.mk
-include $(DEVICE_PATH)/board/*.mk
+# Use xiaomi/msm8992-common
+include $(COMMON_PATH)/PlatformConfig.mk
+include $(COMMON_PATH)/board/*.mk
 
-
+# Call vendor blobs config
 -include vendor/xiaomi/libra/BoardConfigVendor.mk
+
+# Target kernel config
+TARGET_KERNEL_CONFIG := libra_defconfig
