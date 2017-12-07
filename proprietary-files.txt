@@ -1,0 +1,3 @@
+# Fingerprint
+lib/hw/fingerprint.fpc.so
+lib64/hw/fingerprint.fpc.so
