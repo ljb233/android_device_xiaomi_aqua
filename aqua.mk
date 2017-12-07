@@ -24,6 +24,8 @@ $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk
 $(call inherit-product, vendor/xiaomi/msm8992-common/msm8992-common-vendor.mk)
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Fingerprint config
+$(call inherit-product, $(DEVICE_PATH)/fingerprint.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_aqua
