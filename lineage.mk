@@ -15,6 +15,6 @@
 # limitations under the License.
 #
 # Device specific makefile
-$(call inherit-product, device/xiaomi/libra/libra.mk)
+$(call inherit-product, device/xiaomi/aqua/aqua.mk)
 
 

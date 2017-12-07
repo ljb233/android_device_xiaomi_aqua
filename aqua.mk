@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-DEVICE_PATH := device/xiaomi/libra
+DEVICE_PATH := device/xiaomi/aqua
 COMMON_PATH := device/xiaomi/msm8992-common
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
@@ -26,10 +26,10 @@ $(call inherit-product, vendor/xiaomi/msm8992-common/msm8992-common-vendor.mk)
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_NAME := lineage_libra
-PRODUCT_DEVICE := libra
+PRODUCT_NAME := lineage_aqua
+PRODUCT_DEVICE := aqua
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Mi-4c
+PRODUCT_MODEL := Mi-4s
 PRODUCT_MANUFACTURER := Xiaomi
 BOARD_VENDOR := Xiaomi
 
@@ -48,6 +48,6 @@ TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
 
 # Build fingerprint and name
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=libra \
+    PRODUCT_NAME=aqua \
 	BUILD_FINGERPRINT="Xiaomi/libra/libra:7.0/NRD90M/V8.2.3.0.NXKCNEC:user/release-keys" \
 	PRIVATE_BUILD_DESC="libra-user 7.0 NRD90M V8.2.3.0.NXKCNEC release-keys"

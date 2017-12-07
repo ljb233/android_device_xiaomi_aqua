@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/xiaomi/libra
+DEVICE_PATH := device/xiaomi/aqua
 COMMON_PATH := device/xiaomi/msm8992-common
 
 # Use xiaomi/msm8992-common
@@ -25,4 +25,4 @@ include $(COMMON_PATH)/board/*.mk
 -include vendor/xiaomi/libra/BoardConfigVendor.mk
 
 # Target kernel config
-TARGET_KERNEL_CONFIG := libra_defconfig
+TARGET_KERNEL_CONFIG := aqua_defconfig

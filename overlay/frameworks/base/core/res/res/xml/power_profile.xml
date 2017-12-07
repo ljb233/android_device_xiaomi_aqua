@@ -17,5 +17,5 @@
 */
 -->
 <device name="Android">
-    <item name="battery.capacity">3000</item>
+    <item name="battery.capacity">3260</item>
 </device>
