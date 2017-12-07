@@ -15,7 +15,7 @@ PRODUCT_PACKAGES += \
     fingerprintd
 
 # Fingerprint prop
-TARGET_SYSTEM_PROP += $(LOCAL_PATH)/system.prop
+TARGET_SYSTEM_PROP += device/xiaomi/aqua/system.prop
 
 # Ramdisk package
 PRODUCT_PACKAGES += \
