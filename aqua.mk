@@ -23,8 +23,6 @@ $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 # Inherit common xiaomi msm8992
 $(call inherit-product, device/xiaomi/msm8992-common/msm8992.mk)
-# Fingerprint config
-include $(DEVICE_PATH)/fingerprint.mk
 
 # Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_aqua
@@ -52,3 +50,30 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=aqua \
 	BUILD_FINGERPRINT="Xiaomi/libra/libra:7.0/NRD90M/V8.2.3.0.NXKCNEC:user/release-keys" \
 	PRIVATE_BUILD_DESC="libra-user 7.0 NRD90M V8.2.3.0.NXKCNEC release-keys"
+
+# Fingerprint blobs
+$(call inherit-product, vendor/xiaomi/aqua/aqua-vendor.mk)
+
+# Fingerprint config for aqua device
+PRODUCT_COPY_FILES += \
+    device/xiaomi/aqua/keylayout/uinput-fpc.kl:system/usr/keylayout/uinput-fpc.kl \
+    device/xiaomi/aqua/idc/uinput-fpc.idc:system/usr/idc/uinput-fpc.idc
+
+# Fingerprint permissions
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml
+
+# Build fingerprintd from source
+PRODUCT_PACKAGES += \
+    fingerprintd
+
+# Fingerprint prop
+TARGET_SYSTEM_PROP += device/xiaomi/aqua/system.prop
+
+# Ramdisk package
+PRODUCT_PACKAGES += \
+    init.aqua.fpc.rc
+
+# SELinux requirements
+BOARD_SEPOLICY_DIRS += \
+    device/xiaomi/aqua/sepolicy
