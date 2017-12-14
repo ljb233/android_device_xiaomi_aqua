@@ -48,8 +48,8 @@ TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
 # Build fingerprint and name
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=aqua \
-	BUILD_FINGERPRINT="Xiaomi/libra/libra:7.0/NRD90M/V8.2.3.0.NXKCNEC:user/release-keys" \
-	PRIVATE_BUILD_DESC="libra-user 7.0 NRD90M V8.2.3.0.NXKCNEC release-keys"
+	BUILD_FINGERPRINT="Xiaomi/aqua/aqua:7.0/NRD90M/7.12.7:user/release-keys" \
+	PRIVATE_BUILD_DESC="aqua-user 7.0 NRD90M 7.12.7 release-keys"
 
 # Fingerprint blobs
 $(call inherit-product, vendor/xiaomi/aqua/aqua-vendor.mk)
