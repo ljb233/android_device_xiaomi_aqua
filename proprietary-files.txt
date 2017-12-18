@@ -1,3 +1,7 @@
 # Fingerprint
+lib/libcom_fingerprints_service.so
 lib/hw/fingerprint.fpc.so
+lib64/libcom_fingerprints_service.so
 lib64/hw/fingerprint.fpc.so
+vendor/lib/hw/gatekeeper.msm8992.so
+vendor/lib64/hw/gatekeeper.msm8992.so
