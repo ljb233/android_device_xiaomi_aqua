@@ -73,7 +73,3 @@ TARGET_SYSTEM_PROP += device/xiaomi/aqua/system.prop
 # Ramdisk package
 PRODUCT_PACKAGES += \
     init.aqua.fpc.rc
-
-# SELinux requirements
-BOARD_SEPOLICY_DIRS += \
-    device/xiaomi/aqua/sepolicy
